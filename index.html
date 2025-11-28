@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <img src="img/logo.png" alt="logo">
+                <h2>С помощью нас вы сможете создать то, о чем <span>желаете!</span></h2>
+                <p>Наши специалисты всегда помогут Вам достичь огромных успехов.</p>
+                <button class="btn change-color-btn">Узнать больше...</button>
+            </div>
+
+            <div class="hero-image">
+                <img src="img/header-img.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Что Вам необходимо?</h2>
+            <div class="services-blocks">
+                <div class="service-item">
+                    <img src="img\f3.png" alt="logo">
+                    <h3>Первый блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-item">
+                    <img src="img\f4.png" alt="logo">
+                    <h3>Второй блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-item">
+                    <img src="img\f5.png" alt="logo">
+                    <h3>Третий блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 🔵 НОВАЯ ФОРМА (валидируется JS) -->
+    <section class="product-form">
+        <div class="container">
+            <h2 class="section-title">Форма заказа продукта</h2>
+
+            <form id="orderForm" class="callback-form">
+                <input type="text" id="p-name" placeholder="Ваше имя">
+                <input type="email" id="p-email" placeholder="Email">
+                <input type="tel" id="p-phone" placeholder="Телефон">
+                <input type="number" id="p-count" placeholder="Количество">
+                
+                <select id="p-product">
+                    <option value="">Выберите продукт...</option>
+                    <option value="Услуга А">Услуга А</option>
+                    <option value="Услуга Б">Услуга Б</option>
+                    <option value="Услуга В">Услуга В</option>
+                </select>
+
+                <button class="btn" type="submit">Заказать</button>
+            </form>
+
+            <div id="orderResult"></div>
+        </div>
+    </section>
+
+
+    <!-- 🔵 СТАРАЯ ФОРМА (HTML5-валидация) -->
+    <section class="callback">
+        <div class="container">
+            <h2 class="section-title">Форма заказа обратного звонка</h2>
+
+            <form class="callback-form">
+                <input type="text" placeholder="Имя" required minlength="2">
+                <input type="email" placeholder="Электронная почта (Email)" required>
+                <input type="tel" placeholder="Телефон" pattern="^[0-9\-\+\s]{6,}$" required>
+                <input type="text" placeholder="Какая тема Вас интересует?" required minlength="5">
+                <button type="submit" class="btn">Отправить вопрос!</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Все на этом сайте защищено</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

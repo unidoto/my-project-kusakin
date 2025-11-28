@@ -1,0 +1,331 @@
+/* === БАЗОВЫЕ СТИЛИ (большие экраны ≥1200px) === */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+/* Кнопка */
+.btn {
+	padding: 12px 25px;
+	background: #ffcc00;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 20px;
+	transition: all 0.3s ease;
+}
+
+.btn:hover {
+	background: #ffd633;
+}
+
+/* --- Первый блок --- */
+.hero {
+	background: linear-gradient(to right, #4da8f0, #1e90ff);
+	padding: 60px 0;
+	color: white;
+}
+
+.hero-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+}
+
+.hero-text {
+	flex: 1;
+}
+
+.hero-text h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.hero-text h2 span {
+	color: white;
+	font-size: 40px;
+}
+
+.hero-text p {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.hero-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* --- Второй блок --- */
+.services {
+	background: #fff;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.section-title {
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+
+.services-blocks {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.service-item {
+	flex: 0 0 30%;
+	background: #f4faff;
+	padding: 20px;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+	transform: translateY(-5px);
+}
+
+.service-item h3 {
+	margin: 15px 0;
+	font-size: 18px;
+}
+
+.service-item p {
+	font-size: 14px;
+	color: #555;
+}
+
+/* --- Третий блок --- */
+.callback {
+	background: #f0f4f9;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.callback-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.callback-form input {
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+/* --- Подвал --- */
+footer {
+	background: #1e90ff;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 14px;
+}
+
+
+/* === Брейкпоинт 1: 992px–1199px (планшеты и маленькие ноутбуки) === */
+@media (max-width: 1199px) and (min-width: 992px) {
+	.container {
+		width: 90%;
+	}
+
+	.hero-container {
+		gap: 20px;
+	}
+
+	.hero-text h2 {
+		font-size: 26px;
+	}
+
+	.hero-text h2 span {
+		font-size: 34px;
+	}
+
+	.hero-text p {
+		font-size: 15px;
+	}
+
+	.services-blocks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.service-item {
+		padding: 15px;
+	}
+
+	.section-title {
+		font-size: 24px;
+	}
+
+	.btn {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
+
+
+/* === Брейкпоинт 2: 768px–991px (мобильные устройства) === */
+@media (max-width: 991px) and (min-width: 768px) {
+	.container {
+		width: 90%;
+	}
+
+	.hero-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.hero-text {
+		padding: 0;
+	}
+
+	.hero-text h2 {
+		font-size: 28px;
+	}
+
+	.hero-text h2 span {
+		display: block;
+		font-size: 36px;
+	}
+
+	.hero-text p {
+		font-size: 16px;
+	}
+
+	.hero-image {
+		margin-top: 20px;
+	}
+
+	.services-blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.service-item {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.callback-form {
+		width: 90%;
+	}
+
+	.btn {
+		width: 100%;
+		padding: 15px;
+		font-size: 16px;
+	}
+}
+
+
+/* === Брейкпоинт 3: менее 768px (мелкие смартфоны) === */
+@media (max-width: 767px) {
+	.container {
+		width: 95%;
+	}
+
+	.hero {
+		padding: 40px 0;
+	}
+
+	.hero-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.hero-text h2 {
+		font-size: 24px;
+	}
+
+	.hero-text h2 span {
+		font-size: 28px;
+	}
+
+	.hero-text p {
+		font-size: 15px;
+	}
+
+	.services {
+		padding: 40px 0;
+	}
+
+	.services-blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.service-item h3 {
+		font-size: 16px;
+	}
+
+	.service-item p {
+		font-size: 13px;
+	}
+
+	.callback {
+		padding: 40px 0;
+	}
+
+	.callback-form input {
+		font-size: 15px;
+		padding: 14px;
+	}
+
+	.btn {
+		width: 100%;
+		padding: 16px;
+		font-size: 16px;
+	}
+
+	footer {
+		font-size: 13px;
+		padding: 15px;
+	}
+}
+
+/* Новый блок с формой */
+.product-form {
+    background: #eef3ff;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#orderResult {
+    margin-top: 25px;
+    padding: 15px;
+    background: #fff3c4;
+    border-radius: 6px;
+    font-size: 16px;
+    display: none;
+}
+
+/* Анимация увеличения карточки */
+.service-item.clicked {
+    transform: scale(1.07);
+    background: #e3f1ff;
+}
